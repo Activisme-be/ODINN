@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+@import 'settings/variables';
+
+@import '~bootstrap/scss/bootstrap';
+
+@import 'modules/icons';
+@import 'modules/tables';
+@import 'modules/typography';
+@import 'modules/general';
+@import 'modules/dropdown';
+@import 'modules/navigation';
+@import 'modules/footer';
+@import 'modules/buttons';
+@import 'modules/misc';
+@import 'modules/form';
+@import 'modules/labels';
+
+// Stamp partial
+.stamp {
+    color: #fff;
+    background: #868e96;
+    display: inline-block;
+    min-width: 2rem;
+    height: 2rem;
+    padding: 0 .25rem;
+    line-height: 2rem;
+    text-align: center;
+    border-radius: 3px;
+    font-weight: 600;
+}
+
+.stamp-md {
+    min-width: 2.5rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+}
+
+.stamp-bg-brand {
+    background-color: #3182CE;
+}
+
+.td-options {
+    width: 190px;
+}
+
+.bg-error {
+    background-color: #FFF5F5;
+    color: #F56565;
+}

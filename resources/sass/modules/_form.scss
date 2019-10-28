@@ -1,0 +1,42 @@
+.has-search .form-control {
+  padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 2.375rem;
+  text-align: center;
+  pointer-events: none;
+  color: #aaa;
+}
+
+label {
+    margin-bottom: .20rem; //Default: .50rem;
+}
+
+.form-search {
+  width: 260px !important;
+}
+
+.form-control:disabled,
+.form-control[readonly] {
+    background-color: #f1f5f8;
+    pointer-events: none;
+    opacity: 1;
+    color: #606F7B;
+    border: 0 !important;
+    outline: none;
+}
+
+.custom-select:disabled {
+    background-color: #f1f5f8;
+    pointer-events: none;
+    opacity: 1;
+    color: #606F7B;
+    border: 0 !important;
+    outline: none;
+}
