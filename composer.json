@@ -13,6 +13,7 @@
         "actb/laravel-validation-rules": "^1.2",
         "cybercog/laravel-ban": "^4.2",
         "fideloper/proxy": "^4.0",
+        "glorand/laravel-model-settings": "^3.5",
         "laracasts/flash": "^3.0",
         "laravel/framework": "^6.3",
         "laravel/tinker": "^1.0",

@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Cache;
 use Spatie\Permission\Traits\HasRoles;
 use Cog\Contracts\Ban\Bannable as BannableContract;
 use Cog\Laravel\Ban\Traits\Bannable;
+use Glorand\Model\Settings\Traits\HasSettingsTable;
 
 /**
  * Class User
@@ -18,7 +19,14 @@ use Cog\Laravel\Ban\Traits\Bannable;
  */
 class User extends Authenticatable implements BannableContract
 {
-    use Notifiable, HasRoles, Bannable;
+    use Notifiable, HasRoles, Bannable, HasSettingsTable;
+
+    /**
+     * Default notification settings for the authenticated user.
+     *
+     * @var array
+     */
+    public $defaultSettings = ['system_notifications' => 'mail', 'inbound_notifications' => 'mail'];
 
     /**
      * The attributes that are mass assignable.
