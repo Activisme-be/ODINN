@@ -79,6 +79,12 @@
                         <a href="{{ route('inventory.admin.index') }}" class="{{ active('inventory.*') }} nav-link">
                             <i class="fe fe-list mr-1 fe-navbar"></i> Inventaris
                         </a>
+
+                        @if ($currentUser->hasRole('admin'))
+                            <a href="{{ route('inbound.admin-overview') }}" class="nav-link {{ active('inbound.*') }}">
+                                <i class="fe fe-heart fe-navbar mr-1"></i> Donaties
+                            </a>
+                        @endif
                     @endif
 
                     {{-- Coordinator section of the navbar --}}

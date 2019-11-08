@@ -13,6 +13,7 @@
 
 use App\Http\Controllers\Categories\CategoryController;
 use App\Http\Controllers\DeactivationController;
+use App\Http\Controllers\Inbound\AdminController as InboundAdminController;
 use App\Http\Controllers\Inventory\AdminController;
 use App\Http\Controllers\Locations\InventoryController;
 use App\Http\Controllers\Locations\LocationController;
@@ -64,3 +65,6 @@ Route::get('/inventaris', [AdminController::class, 'index'])->name('inventory.ad
 Route::get('/item/activiteit/{item}', [AdminController::class, 'interactionLog'])->name('inventory.admin.actions');
 Route::get('/nieuw-item', [AdminController::class, 'create'])->name('inventory.admin.create');
 Route::post('/nieuw-item', [AdminController::class, 'store'])->name('inventory.admin.store');
+
+// Inbound routes
+Route::get('/materiele-donaties', [InboundAdminController::class, 'index'])->name('inbound.admin-overview');

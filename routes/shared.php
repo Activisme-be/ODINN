@@ -11,6 +11,7 @@
 |
 */
 
+use App\Http\Controllers\Inbound\WebController;
 use App\Http\Controllers\Inventory\CheckInController;
 use App\Http\Controllers\Inventory\CheckoutController;
 use App\Http\Controllers\Profile\InformationController;
@@ -35,3 +36,7 @@ Route::post('/inboeken/{item}', [CheckInController::class, 'store'])->name('inve
 
 Route::get('/uitboeken/{item}', [CheckoutController::class, 'create'])->name('inventory.checkout');
 Route::post('/uitboeken/{item}', [CheckoutController::class, 'store'])->name('inventory.checkout');
+
+// Inbound routes
+Route::get('/doneren', [WebController::class, 'index'])->name('inbound.create');
+Route::post('/doneren', [WebController::class, 'store'])->name('inbound.store');

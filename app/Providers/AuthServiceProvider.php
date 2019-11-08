@@ -3,10 +3,12 @@
 namespace App\Providers;
 
 use App\Models\Category;
+use App\Models\Inbound;
 use App\Models\Item;
 use App\Models\Location;
 use App\Models\User;
 use App\Policies\CategoryPolicy;
+use App\Policies\InboundPolicy;
 use App\Policies\ItemPolicy;
 use App\Policies\LocationPolicy;
 use App\Policies\UserPolicy;
@@ -28,7 +30,8 @@ class AuthServiceProvider extends ServiceProvider
         Category::class => CategoryPolicy::class,
         User::class     => UserPolicy::class,
         Location::class => LocationPolicy::class,
-        Item::class     => ItemPolicy::class
+        Item::class     => ItemPolicy::class,
+        Inbound::class  => InboundPolicy::class,
     ];
 
     /**

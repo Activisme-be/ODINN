@@ -27,7 +27,7 @@ class WebController extends Controller
     public function index(): Renderable
     {
         $locations = Location::pluck('id', 'name');
-        return view('inbound.web-index', compact('locations'));
+        return view('inbound.web-overview', compact('locations'));
     }
 
     public function store(InboundFormRequest $request): RedirectResponse
