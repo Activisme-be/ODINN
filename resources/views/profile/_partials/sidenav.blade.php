@@ -3,6 +3,10 @@
         <i class="fe fe-info text-muted mr-2"></i> Algemene informatie
     </a>
 
+    <a href="{{ route('profile.settings.notifications') }}" class="list-group-item {{ active('profile.settings.notifications') }} list-group-item-action">
+        <i class="fe fe-bell text-muted mr-2"></i> Notificatie instellingen
+    </a>
+
     <a href="{{ route('profile.settings.security') }}" class="list-group-item {{ active('profile.settings.security') }} list-group-item-action">
         <i class="fe fe-shield text-muted mr-2"></i> Account beveiliging
     </a>

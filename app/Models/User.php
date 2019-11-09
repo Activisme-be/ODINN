@@ -26,7 +26,7 @@ class User extends Authenticatable implements BannableContract
      *
      * @var array
      */
-    public $defaultSettings = ['system_notifications' => 'mail', 'inbound_notifications' => 'mail'];
+    public $defaultSettings = ['system_notifications' => 'mail'];
 
     /**
      * The attributes that are mass assignable.

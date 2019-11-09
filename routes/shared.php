@@ -14,6 +14,7 @@
 use App\Http\Controllers\Inventory\CheckInController;
 use App\Http\Controllers\Inventory\CheckoutController;
 use App\Http\Controllers\Profile\InformationController;
+use App\Http\Controllers\Profile\NotificationController;
 use App\Http\Controllers\Profile\SecurityController;
 use App\Http\Controllers\Inventory\SharedController;
 
@@ -22,6 +23,7 @@ Route::get('/account-informatie', [InformationController::class, 'index'])->name
 Route::patch('/account-informatie', [InformationController::class, 'update'])->name('profile.settings.info');
 Route::get('/account-beveiliging', [SecurityController::class, 'index'])->name('profile.settings.security');
 Route::patch('/account-beveiliging', [SecurityController::class, 'update'])->name('profile.settings.security');
+Route::get('/notificatie-instellingen', [NotificationController::class, 'index'])->name('profile.settings.notifications');
 
 // Items routes
 Route::get('inventory/{item}', [SharedController::class, 'show'])->name('inventory.show');
