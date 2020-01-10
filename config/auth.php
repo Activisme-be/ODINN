@@ -97,6 +97,7 @@ return [
             'provider' => 'users',
             'table' => 'password_resets',
             'expire' => 60,
+            'throttle' => 60,
         ],
     ],
 
@@ -105,9 +106,9 @@ return [
     | Password Confirmation Timeout
     |--------------------------------------------------------------------------
     |
-    | Here you may define the amount of seconds before a password confirmation
-    | times out and the user is prompted to re-enter their password via the
-    | confirmation screen. By default, the timeout lasts for three hours.
+     | This controller is responsible for handling password confirmations and
+    | uses a simple trait to include the behavior. You're free to explore
+    | this trait and override any functions that require customization.
     |
     */
 
