@@ -33,11 +33,13 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-                    <ul class="navbar-nav mr-auto">
-                        &nbsp;
-                    </ul>
 
                     <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="mailto:tim@activisme.be" class="nav-link">
+                                <i class="fe fe-info text-white mr-2"></i> Help
+                            </a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('profile.settings.info') }}">
                                 <i class="fe fe-user text-white mr-2"></i>{{ ucfirst($currentUser->name) }}
