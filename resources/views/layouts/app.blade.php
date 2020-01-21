@@ -22,7 +22,7 @@
     </head>
     <body>
         <div id="app">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <nav class="navbar bg-navbar navbar-expand-lg navbar-dark">
                 <img src="{{ asset('img/logo.jpg') }}" width="35" height="35" class="mr-3 rounded d-inline-block align-top" alt="{{ config('app.name', 'Laravel') }}">
                 <a class="navbar-brand mr-auto mr-lg-0" href="#">
                     {{ config('app.name', 'Laravel') }} - ODINN
