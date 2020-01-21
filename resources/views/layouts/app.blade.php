@@ -63,38 +63,34 @@
                 <nav class="nav nav-underline">
                     @if ($currentUser->hasAnyRole(['admin', 'webmaster']))
                         <a href="{{ route('home') }}" class="{{ active('home') }} nav-link">
-                            <i class="fe fe-home mr-1 fe-navbar"></i> Dashboard
+                            <i class="fe fe-home mr-1 text-muted"></i> Dashboard
                         </a>
 
                         <a href="{{ route('users.index') }}" class="{{ active('users.*') }} nav-link">
-                            <i class="fe fe-users mr-1 fe-navbar"></i> Gebruikers
+                            <i class="fe fe-users mr-1 text-muted"></i> Gebruikers
                         </a>
 
                         <a href="{{ route('locations.index') }}" class="{{ active('locations.*') }} nav-link">
-                            <i class="fe fe-map-pin mr-1 fe-navbar"></i> Locaties
+                            <i class="fe fe-map-pin mr-1 text-muted"></i> Locaties
                         </a>
 
                         <a href="{{ route('tags.overview') }}" class="nav-link {{ active('tags.*') }}">
-                            <i class="fe fe-tag mr-1 fe-navbar"></i> Categorieen
+                            <i class="fe fe-tag mr-1 text-muted"></i> Categorieen
                         </a>
 
                         <a href="{{ route('inventory.admin.index') }}" class="{{ active('inventory.*') }} nav-link">
-                            <i class="fe fe-list mr-1 fe-navbar"></i> Inventaris
-                        </a>
-
-                        <a href="" class="nav-link">
-                            <i class="fe fe-list mr- fe-navbar"></i> Donaties
+                            <i class="fe fe-list mr-1 text-muted"></i> Inventaris
                         </a>
                     @endif
 
                     {{-- Coordinator section of the navbar --}}
                     @if ($currentUser->hasRole('vrijwilliger') && ! $currentUser->hasAnyRole(['admin', 'webmaster']))
                         <a href="{{ route('coordinator.home') }}" class="{{ active(['coordinator.home', 'coordinator.inventory.*']) }} nav-link">
-                            <i class="fe fe-list mr-1 fe-navbar"></i> Inventaris
+                            <i class="fe fe-list mr-1 text-muted"></i> Inventaris
                         </a>
 
                         <a href="{{ route('locations.show', $currentUser->location) }}" class="nav-link">
-                            <i class="fe fe-map-pin mr-1 fe-navbar"></i> Inzamelpunt
+                            <i class="fe fe-map-pin mr-1 text-muted"></i> Inzamelpunt
                         </a>
                     @endif
                 </nav>
