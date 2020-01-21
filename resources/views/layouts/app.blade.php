@@ -81,6 +81,10 @@
                         <a href="{{ route('inventory.admin.index') }}" class="{{ active('inventory.*') }} nav-link">
                             <i class="fe fe-list mr-1 fe-navbar"></i> Inventaris
                         </a>
+
+                        <a href="" class="nav-link">
+                            <i class="fe fe-list mr- fe-navbar"></i> Donaties
+                        </a>
                     @endif
 
                     {{-- Coordinator section of the navbar --}}

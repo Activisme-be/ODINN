@@ -8,63 +8,95 @@
     </div>
 
     <div class="container-fluid pb-3">
-        <div class="row"> {{-- Dashboard counters --}}
+        <div class="row mb-4"> {{-- Dashboard counters --}}
             <div class="col-3">
-                <div class="card border-0 shadow-sm mb-4 p-2">
-                    <div class="d-flex align-items-center">
-                        <span class="stamp stamp-md shadow-sm stamp-bg-brand mr-3">
-                            <i class="fe fe-users"></i>
-                        </span>
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body mb-1 p-2">
+                        <div class="d-flex align-items-center">
+                            <span class="stamp stamp-md shadow-sm stamp-bg-brand mr-3">
+                                <i class="fe fe-users"></i>
+                            </span>
 
-                        <div>
-                            <h5 class="m-0">{{ $users->total }} <small>gebruikers</small></h5>
-                            <small class="text-muted">waarvan {{ $users->deactivated_count }} gedeactiveerd</small>
+                            <div>
+                                <h5 class="m-0">{{ $users->total }} <small>gebruikers</small></h5>
+                                <small class="text-muted">waarvan {{ $users->deactivated_count }} gedeactiveerd</small>
+                            </div>
                         </div>
+                    </div>
+
+                    <div class="card-footer p-1 text-center text-muted border-top-0">
+                        <a href="{{ route('users.index') }}" class="text-decoration-none text-muted">
+                            Bekijk gebruikers
+                        </a>
                     </div>
                 </div>
             </div>
 
             <div class="col-3">
-                <div class="card border-0 shadow-sm mb-4 p-2">
-                    <div class="d-flex align-items-center">
-                        <span class="stamp stamp-md shadow-sm stamp-bg-brand mr-3">
-                            <i class="fe fe-list"></i>
-                        </span>
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body mb-1 p-2">
+                        <div class="d-flex align-items-center">
+                            <span class="stamp stamp-md shadow-sm stamp-bg-brand mr-3">
+                                <i class="fe fe-list"></i>
+                            </span>
 
-                        <div>
-                            <h5 class="m-0">{{ $items->total }} <small>Items</small></h5>
-                            <small class="text-muted">Totaal goederen opgeteld: {{ $items->quantity_count }} stuks </small>
+                            <div>
+                                <h5 class="m-0">{{ $items->total }} <small>Items</small></h5>
+                                <small class="text-muted">Totaal goederen opgeteld: {{ $items->quantity_count ?? '0' }} stuks </small>
+                            </div>
                         </div>
+                    </div>
+
+                    <div class="card-footer p-1 text-center text-muted border-top-0">
+                        <a href="{{ route('inventory.admin.index') }}" class="text-decoration-none text-muted">
+                            Bekijk inventaris
+                        </a>
                     </div>
                 </div>
             </div>
 
             <div class="col-3">
-                <div class="card border-0 shadow-sm mb-4 p-2">
-                    <div class="d-flex align-items-center">
-                        <span class="stamp stamp-md shadow-sm stamp-bg-brand mr-3">
-                            <i class="fe fe-tag"></i>
-                        </span>
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body mb-1 p-2">
+                        <div class="d-flex align-items-center">
+                            <span class="stamp stamp-md shadow-sm stamp-bg-brand mr-3">
+                                <i class="fe fe-tag"></i>
+                            </span>
 
-                        <div>
-                            <h5 class="m-0">{{ $categories->total }} <small>Categorieen</small></h5>
-                            <small class="text-muted">{{ $categories->today_count }} toegevoegd vandaag </small>
+                            <div>
+                                <h5 class="m-0">{{ $categories->total }} <small>Categorieen</small></h5>
+                                <small class="text-muted">{{ $categories->today_count }} toegevoegd vandaag </small>
+                            </div>
                         </div>
+                    </div>
+
+                    <div class="card-footer p-1 text-center text-muted border-top-0">
+                        <a href="{{ route('tags.overview') }}" class="text-decoration-none text-muted">
+                            Bekijk categorieen
+                        </a>
                     </div>
                 </div>
             </div>
 
             <div class="col-3">
-                <div class="card border-0 shadow-sm mb-4 p-2">
-                    <div class="d-flex align-items-center">
-                        <span class="stamp stamp-md shadow-sm stamp-bg-brand mr-3">
-                            <i class="fe fe-map-pin"></i>
-                        </span>
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body mb-1 p-2">
+                        <div class="d-flex align-items-center">
+                            <span class="stamp stamp-md shadow-sm stamp-bg-brand mr-3">
+                                <i class="fe fe-map-pin"></i>
+                            </span>
 
-                        <div>
-                            <h5 class="m-0">{{ $locations['total'] }} <small>Locaties</small></h5>
-                            <small class="text-muted">{{ $locations['today_count'] }} toegevoegd vandaag </small>
+                            <div>
+                                <h5 class="m-0">{{ $locations['total'] }} <small>Locaties</small></h5>
+                                <small class="text-muted">{{ $locations['today_count'] }} toegevoegd vandaag </small>
+                            </div>
                         </div>
+                    </div>
+
+                    <div class="card-footer p-1 text-center border-top-0">
+                        <a href="{{ route('locations.index') }}" class="text-decoration-none text-muted">
+                            Bekijk locaties
+                        </a>
                     </div>
                 </div>
             </div>
