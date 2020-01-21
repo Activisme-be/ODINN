@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use App\Providers\RouteServiceProvider;
 use Closure;
 use Illuminate\Support\Facades\Auth;
 
@@ -21,7 +22,7 @@ class RedirectIfAuthenticated
             $user = auth()->user();
 
             if ($user->hasAnyRole(['admin', 'webmaster'])) {
-                return redirect()->route('home');
+                return redirect(RouteServiceProvider::HOME);
             }
 
             if ($user->hasRole('vrijwilliger') && $user->location()->exists()) {
